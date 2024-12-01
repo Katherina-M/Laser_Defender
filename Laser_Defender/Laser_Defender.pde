@@ -10,7 +10,11 @@ void draw(){
   
   player.update();
   player.display();
+
+  
+  
+}
+
+void keyPressed(){
   player.reset();
-  
-  
 }
