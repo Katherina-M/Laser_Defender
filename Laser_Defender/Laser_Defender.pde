@@ -17,15 +17,13 @@ void setup(){
   //Initialize laser machine list
   laserMachines = new ArrayList<LaserMachine>();
   //Add laser machines at pre-defined positions
-  laserMachines.add((new LaserMachine(0, 100));
-  laserMachines.add((new LaserMachine(0, 300));
-  laserMachines.add((new LaserMachine(0, 500));
-  laserMachines.add((new LaserMachine(0, 700));
-  laserMachines.add((new LaserMachine(0, 200));
-  laserMachines.add((new LaserMachine(0, 400));
-  laserMachines.add((new LaserMachine(0, 600));
-  
-  
+  laserMachines.add(new LaserMachine(0, 100));
+  laserMachines.add(new LaserMachine(0, 300));
+  laserMachines.add(new LaserMachine(0, 500));
+  laserMachines.add(new LaserMachine(0, 700));
+  laserMachines.add(new LaserMachine(800, 200));
+  laserMachines.add(new LaserMachine(800, 400));
+  laserMachines.add(new LaserMachine(800, 600));
 }
 
 void draw(){
@@ -45,6 +43,12 @@ void draw(){
     fill(255, 0, 0);  //Fill text to red
     text("Game Over! Press R to restart", width / 2, height / 2);  //Message display in the center of the screen
   }
+  
+  //Display laser machines
+  for (int i = 0; i <laserMachines.size(); i++){
+    laserMachines.get(i).display();
+  }
+  
 }
 
 void keyPressed(){
