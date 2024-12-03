@@ -17,14 +17,17 @@ void setup(){
   //Initialize laser machine list
   laserMachines = new ArrayList<LaserMachine>();
   //Add laser machines at pre-defined positions
+  //Left side
   laserMachines.add(new LaserMachine(0, 100));  //Left 1
   laserMachines.add(new LaserMachine(0, 300));  //Left 2
   laserMachines.add(new LaserMachine(0, 500));  //Left 3
   laserMachines.add(new LaserMachine(0, 700));  //Left 4
+  //Right side
   laserMachines.add(new LaserMachine(800, 200));  //Right 1
   laserMachines.add(new LaserMachine(800, 400));  //Right 2
   laserMachines.add(new LaserMachine(800, 600));  //Right 3
-    laserMachines.add(new LaserMachine(200, 0));  //Top 1
+  //Top side
+  laserMachines.add(new LaserMachine(200, 0));  //Top 1
   laserMachines.add(new LaserMachine(400, 0));  //Top 2
   laserMachines.add(new LaserMachine(600, 0));  //Top 3
 }
@@ -37,10 +40,12 @@ void draw(){
   endArea.display();
   
   //Check player state
-  if (gameState.equals("playing")){  //Updated and display the player which the game is "playing" state
-     player.update();
-     player.display();
-  } else if (gameState.equals("gameOver")){  //Display "Game Over" when the game is "gameOver" state
+  if (gameState.equals("playing")){
+    //Updated and display the player which the game is "playing" state
+    player.update();
+    player.display();
+  } else if (gameState.equals("gameOver")){  
+    //Display "Game Over" when the game is "gameOver" state
     textAlign(CENTER, CENTER);  //Center-align the text
     textSize(32);  //Font size
     fill(255, 0, 0);  //Fill text to red
@@ -49,6 +54,7 @@ void draw(){
   
   //Display laser machines
   for (int i = 0; i <laserMachines.size(); i++){
+    laserMachines.get(i).display();
     laserMachines.get(i).display();
   }
   
