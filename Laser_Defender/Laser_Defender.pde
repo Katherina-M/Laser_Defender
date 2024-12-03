@@ -6,8 +6,8 @@ GameArea endArea;  //End area at the top
 void setup(){
   size(800, 800);  //Set screen size
   
-  //Player initial position at the center of the screen
-  player = new Player(new PVector(width / 2, height / 2));  
+  //Player initial position at the bottom of the screen
+  player = new Player(new PVector(width / 2, height -50));  
   
   //Define start and end areas
   startArea = new GameArea(0, height - 100, width, 100, color(50, 150, 50));  //Green at the bottom
