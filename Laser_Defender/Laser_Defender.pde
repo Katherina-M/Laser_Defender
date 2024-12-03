@@ -17,13 +17,16 @@ void setup(){
   //Initialize laser machine list
   laserMachines = new ArrayList<LaserMachine>();
   //Add laser machines at pre-defined positions
-  laserMachines.add(new LaserMachine(0, 100));
-  laserMachines.add(new LaserMachine(0, 300));
-  laserMachines.add(new LaserMachine(0, 500));
-  laserMachines.add(new LaserMachine(0, 700));
-  laserMachines.add(new LaserMachine(800, 200));
-  laserMachines.add(new LaserMachine(800, 400));
-  laserMachines.add(new LaserMachine(800, 600));
+  laserMachines.add(new LaserMachine(0, 100));  //Left 1
+  laserMachines.add(new LaserMachine(0, 300));  //Left 2
+  laserMachines.add(new LaserMachine(0, 500));  //Left 3
+  laserMachines.add(new LaserMachine(0, 700));  //Left 4
+  laserMachines.add(new LaserMachine(800, 200));  //Right 1
+  laserMachines.add(new LaserMachine(800, 400));  //Right 2
+  laserMachines.add(new LaserMachine(800, 600));  //Right 3
+    laserMachines.add(new LaserMachine(200, 0));  //Top 1
+  laserMachines.add(new LaserMachine(400, 0));  //Top 2
+  laserMachines.add(new LaserMachine(600, 0));  //Top 3
 }
 
 void draw(){
