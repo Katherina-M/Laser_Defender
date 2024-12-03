@@ -1,14 +1,28 @@
 String gameState = "playing";   //Track the game state (playing or gameOver)
 Player player;  //Instance of the player class
+GameArea startArea;  //Start area at the bottom
+GameArea endArea;  //End area at the top
 
 void setup(){
   size(800, 800);  //Set screen size
-  player = new Player(new PVector(width / 2, height / 2));  //Player initial position at the center of the screen
+  
+  //Player initial position at the center of the screen
+  player = new Player(new PVector(width / 2, height / 2));  
+  
+  //Define start and end areas
+  startArea = new GameArea(0, height - 100, width, 100, color(50, 150, 50));  //Green at the bottom
+  endArea = new GameArea(0, 0, width, 100, color(150, 50, 50));  //Red at the bottom
+  
 }
 
 void draw(){
   background(0);  //Background color black
   
+  //Draw start and end areas
+  startArea.display();
+  endArea.display();
+  
+  //Check player state
   if (gameState.equals("playing")){  //Updated and display the player which the game is "playing" state
      player.update();
      player.display();
