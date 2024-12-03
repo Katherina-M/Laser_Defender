@@ -2,6 +2,7 @@ String gameState = "playing";   //Track the game state (playing or gameOver)
 Player player;  //Instance of the player class
 GameArea startArea;  //Start area at the bottom
 GameArea endArea;  //End area at the top
+ArrayList<LaserMachine> laserMachines;  //List to manage laser machine
 
 void setup(){
   size(800, 800);  //Set screen size
@@ -12,6 +13,18 @@ void setup(){
   //Define start and end areas
   startArea = new GameArea(0, height - 100, width, 100, color(50, 150, 50));  //Green at the bottom
   endArea = new GameArea(0, 0, width, 100, color(150, 50, 50));  //Red at the bottom
+  
+  //Initialize laser machine list
+  laserMachines = new ArrayList<LaserMachine>();
+  //Add laser machines at pre-defined positions
+  laserMachines.add((new LaserMachine(0, 100));
+  laserMachines.add((new LaserMachine(0, 300));
+  laserMachines.add((new LaserMachine(0, 500));
+  laserMachines.add((new LaserMachine(0, 700));
+  laserMachines.add((new LaserMachine(0, 200));
+  laserMachines.add((new LaserMachine(0, 400));
+  laserMachines.add((new LaserMachine(0, 600));
+  
   
 }
 
